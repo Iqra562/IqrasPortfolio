@@ -1,0 +1,88 @@
+/* styles.css */
+.ant-layout-header {
+  padding: 0;
+}
+.ant-menu-overflow{
+  width: 100%;
+}
+.ant-menu{
+background-color: black;
+}
+.ant-menu-title-content{
+  color: white;
+}
+.selected{
+  color: yellow;
+}
+
+/* Override the default bottom border */
+
+/* Styling for the selected menu item */
+/* Styling for the selected menu item */
+.ant-menu-item-selected::after {
+  content: ''; /* Ensure pseudo-element has content */
+  display: block; /* Make it a block-level element */
+
+  width: 100%; /* Full width */
+  height: 2px; /* Border height */
+  background-color: yellow; /* Border color */
+  border-bottom-color: gray !important; /* Remove default border-bottom */
+}
+
+/* Additional border styling */
+.ant-menu-item-selected::after {
+  border-bottom-color: green !important;
+  height: 2px;
+  margin: 2px;
+}
+
+
+/* Styling for the selected submenu item */
+.ant-menu.ant-menu-horizontal > .ant-menu-submenu-selected::after {
+  content: ''; /* Ensure pseudo-element has content */
+  display: block; /* Make it a block-level element */
+  width: 100%; /* Full width */
+  height: 4px; /* Height of background */
+  background-color: aqua; /* Background color */
+}
+
+ .ant-menu-item:hover::after {
+  border-bottom-color:transparent !important;
+  margin: 15px;
+  margin-left: -1px;
+  width: 15%; 
+}
+.animation::after {
+  content: ''; 
+  display: block; 
+  background-color: transparent; /* Initial background color */
+  height: 2px;
+  width: 20px;
+  transition: width 6s ease; /* Add transition for width change */
+}
+
+.animation:hover::after {
+  background-color: white;
+  width: 40px; /* Increase width on hover */
+}
+
+
+
+.ant-menu-horizontal .ant-menu-item {
+  /* padding: 0 !important;  */
+  /* Remove default padding */
+  margin: 0;
+  /* border: 2px  solid  rgb(248, 242, 242); */
+  background-color: yellow;
+  line-height: inherit;
+  background-color: transparent !important; 
+  /* Remove default background-color */
+}
+
+
+ .animated-menu-item:active {
+  /* background-color: green !important; */
+  /* background-color: transparent !important;  */
+  /* Remove hover effect */
+}
+
