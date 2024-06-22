@@ -1,44 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import HomeComponent from './pages/Home';
-import ContactComponent from './pages/Contact';
-import NavBar from './pages/Navbar';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./pages/Layout/Layout";
+import Home from "./pages/Home/Home";
+import Resume from "./pages/Resume/Resume"; // corrected import path
+import Projects from "./pages/Projects/Projects";
+import { ThemeProvider } from "@emotion/react";
+import { theme } from "./ThemeProvider/AppThemeProvider";
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <div className="container">
-        <NavBar />
-        <RoutesWithTransitions />
-      </div>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="resume" element={<Resume />} />
+            <Route path="projects" element={<Projects />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
-};
-
-const RoutesWithTransitions = () => {
-  const location = useLocation();
-
-  return (
-    <div className="route-container">
-      <TransitionGroup>
-        <CSSTransition
-          key={location.key}
-          timeout={300}
-          classNames="slide-up"
-        >
-            {/* <div className="route-section"> */}
-              
-          <Routes location={location}>
-            <Route exact path="/" element={<HomeComponent />} />
-            <Route path="/contact" element={<ContactComponent />} />
-          </Routes>
-            {/* </div> */}
-        </CSSTransition>
-      </TransitionGroup>
-    </div>
-  );
-};
+}
 
 export default App;
