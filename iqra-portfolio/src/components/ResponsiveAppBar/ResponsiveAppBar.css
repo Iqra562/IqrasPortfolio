@@ -1,0 +1,40 @@
+.nav-item {
+    position: relative;
+    /* font-weight: bold; */
+    /* display: inline-block; */
+    /* cursor: pointer; */
+  }
+
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    right: 50%;
+    background-color: #69b6fa;
+    transition: width 0.3s, right 0.3s;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+    right: 0;
+  }
+  
+
+  .MuiMenu-paper{
+    padding-top: 0px;padding-bottom: 0s;
+    background: blue;
+
+    /* margin-top: 16px; */
+  }
+
+
+
+  .custom-menu-item {
+    padding: 0; /* Remove padding from MenuItem */
+  }
+  
+  /* Adjust other styles as needed */
+  

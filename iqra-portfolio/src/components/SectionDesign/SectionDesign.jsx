@@ -1,19 +1,24 @@
 import React from 'react';
-import { Container, styled } from '@mui/material';
+import { Box, Container, styled } from '@mui/material';
 
 const AppContainer = styled(Container)(({ theme }) => ({
-  height: '100px',
+  height: '80vh',
   width:"70%",
-//   backgroundColor: theme.palette.primary.main, 
-  marginTop:"20px"
-  // Ensure that `status.danger` exists in your theme
+  backgroundColor: theme.palette.primary.main, 
+  marginTop:"50px",
 }));
 
 function SectionDesign() {
   return (
-    <AppContainer maxWidth="lg" sx={{ backgroundColor: '', }}>
+    <Box style={{
+      height:"80vh"
+    }}>
+
+    <AppContainer maxWidth="xl" sx={{ backgroundColor: '', }}>
       HELLO 
+      <div className='' style={{height:""}}></div>
     </AppContainer>
+    </Box>
   );
 }
 
