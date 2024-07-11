@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, styled } from '@mui/material';
 
-const AppContainer = styled(Container)(({ theme }) => ({
+ const AppContainer = styled(Container)(({ theme }) => ({
   height: '80vh',
   width:"70%",
   backgroundColor: theme.palette.primary.main, 

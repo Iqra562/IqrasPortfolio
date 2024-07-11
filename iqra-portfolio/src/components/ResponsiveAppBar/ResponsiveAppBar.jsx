@@ -170,33 +170,23 @@ const ResponsiveAppBar = () => {
   { name: 'Contact', path: '/contact' },
 ];
   useEffect(() => {
-    // Update activePath whenever currentPath changes
     setActivePath(currentPath);
   }, [currentPath]);
 
   const handleNavItemClick = (path) => {
-    handleCloseNavMenu(); // Close navigation menu on item click
+    handleCloseNavMenu(); 
 
-    // If there is a previously active path, set it to exiting
     if (activePath) {
       setExitingPath(activePath);
     }
 
-    setActivePath(path); // Set the active path to trigger transition
+    setActivePath(path); 
 
-    // Remove exiting path after a delay to allow exit animation to complete
     setTimeout(() => {
       setExitingPath(null);
-    }, 1000); // Adjust the delay to match the exit animation duration
+    }, 1000); 
   };
 
-  const SmallDeviceNavbar = styled(Box)(({ theme }) => ({
-    // height: '80vh',
-    width:"10px",
-    // backgroundColor:'yellow', 
-    // marginTop:"50px",
-  }));
-  
 
   return (
 
@@ -206,25 +196,25 @@ const ResponsiveAppBar = () => {
 
       <Typography
           variant="h4"
-            // noWrap
+            noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontWeight: 700,
               flexGrow:1,
-              // letterSpacing: '.3rem',
               color: 'inherit', 
               textDecoration: 'none',
               fontFamily: 'Roboto',
               letterSpacing:'normal'
             }}
           >
+            <Link to="/home">
             Iqra
+            </Link>
           </Typography>
 
-        <SmallDeviceNavbar sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
             aria-label="account of current user"
@@ -252,22 +242,15 @@ const ResponsiveAppBar = () => {
             onClose={handleCloseNavMenu}
             sx={{
               display: { xs: 'block', md: 'none' },
-              marginTop: '70px',
-              // paddingTop: '100px',
+              marginTop: '55px',
               backgroundColor: 'rgba(0, 0, 0, 0.8)',
               height: '60%',
               '& .MuiList-root': {
                 padding: '0px',
-                // height:'100%'
               },
-              '& .MuiMenuItem-root': {
-                // height:'10%',
-                
-                // padding: '0px',  // Uncomment if you want to remove padding from MenuItem
-              },
+          
               '& .MuiPaper-root': {
                 backgroundColor: 'transparent',
-                // padding: '100px',
                 padding:'0px',
                 height:'100%',
                 boxShadow:'0'
@@ -316,7 +299,7 @@ const ResponsiveAppBar = () => {
 ))}
 
           </Menu>
-        </SmallDeviceNavbar>
+        </Box>
 
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
       {pages.map((page) => (
@@ -327,8 +310,7 @@ const ResponsiveAppBar = () => {
             sx={{
               my: 2,
               color: 'white',
-              //currentPath === page.path ? '#69b6fa' : 'white',
-              display: 'block',
+             display: 'block',
               position: 'relative',
               zIndex: 1,
               textTransform: 'capitalize',

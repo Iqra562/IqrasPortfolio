@@ -1,0 +1,25 @@
+.gradient-text {
+    display: inline-block;
+    /* font-size: 30px; */
+    background: linear-gradient(to bottom, white 60%, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* .underLine-effect {
+    display: inline-block;
+    position: relative;
+    
+  }
+  
+  .underLine-effect:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px; 
+    background: linear-gradient(to right, rgb(105, 182, 250), black);
+    border-radius: 2px;
+  } */
+  

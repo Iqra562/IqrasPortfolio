@@ -6,12 +6,15 @@ import SectionDesign from "../../components/SectionDesign/SectionDesign";
 function Layout(){
 return(
     <>
-    <div className="main">
+    {/* <div className="main"> */}
 
   <ResponsiveAppBar/>
-    {/* <Outlet/> */}
-<SectionDesign/>
-    </div>
+{/* <SectionDesign/> */}
+<div className="main" style={{paddingBottom:"50px"}}>
+  <Outlet/>
+
+</div>
+    {/* </div> */}
     </>
 )
 }

@@ -97,3 +97,14 @@ nav a:hover {
 
 
 
+
+
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 100vh; */
+/* height: auto; */
+ /* background-color: hsl(0, 0%, 9%); */
+background: linear-gradient(135deg, hsla(0, 0%, 13%, 1) 0%, hsla(0, 0%, 13%, 1) 50%, hsla(0, 0%, 12%, 1) 75%, rgb(37, 103, 172) 100%);
+
+}

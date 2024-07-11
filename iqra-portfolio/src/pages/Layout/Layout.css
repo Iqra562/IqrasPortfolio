@@ -1,18 +1,15 @@
 
-
-body {
+  body {
     margin: 0;
     padding: 0;
-    height: 105vh;
-  /* height: auto; */
-   /* background-color: hsl(0, 0%, 9%); */
-  background: linear-gradient(135deg, hsla(0, 0%, 13%, 1) 0%, hsla(0, 0%, 13%, 1) 50%, hsla(0, 0%, 12%, 1) 75%, rgb(37, 103, 172) 100%);
-
-}
-.main {
     /* height: 100vh; */
-    /* padding-top: 100px; */
-    /* padding-bottom: 100px; */
     /* background: linear-gradient(135deg, hsla(0, 0%, 2%, 1) 0%, hsla(0, 0%, 7%, 1) 50%, hsla(0, 0%, 7%, 1) 80%, hsla(211, 100%, 53%, 1) 100%); */
+    background: linear-gradient(135deg, hsla(0, 0%, 2%, 1) 0%, hsla(0, 0%, 7%, 1) 50%, hsla(0, 0%, 7%, 1) 80%, rgb(105, 182, 250) 100%);
+}
 
+.main {
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 20px; /* Example padding */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
 }

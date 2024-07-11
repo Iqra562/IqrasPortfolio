@@ -1,10 +1,8 @@
+/* hover animation on nav item  */
 .nav-item {
     position: relative;
-    /* font-weight: bold; */
-    /* display: inline-block; */
-    /* cursor: pointer; */
+ 
   }
-
   
   .nav-item::after {
     content: '';
@@ -13,7 +11,7 @@
     height: 2px;
     bottom: -2px;
     right: 50%;
-    background-color: #69b6fa;
+    background-color: rgb(105, 182, 250);
     transition: width 0.3s, right 0.3s;
   }
   
@@ -22,19 +20,17 @@
     right: 0;
   }
   
-
+/* 
   .MuiMenu-paper{
     padding-top: 0px;padding-bottom: 0s;
     background: blue;
 
-    /* margin-top: 16px; */
+  } */
+
+
+
+  /* .custom-menu-item {
+    padding: 0; 
   }
-
-
-
-  .custom-menu-item {
-    padding: 0; /* Remove padding from MenuItem */
-  }
-  
-  /* Adjust other styles as needed */
+   */
   
