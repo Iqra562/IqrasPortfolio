@@ -11,7 +11,7 @@
     height: 2px;
     bottom: -2px;
     right: 50%;
-    background-color: rgb(105, 182, 250);
+    background-color: #69b6fa;
     transition: width 0.3s, right 0.3s;
   }
   

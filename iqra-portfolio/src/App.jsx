@@ -5,6 +5,7 @@ import Resume from "./pages/Resume/Resume"; // corrected import path
 import Projects from "./pages/Projects/Projects";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "./ThemeProvider/AppThemeProvider";
+import Skills from "./pages/Skills/Skills";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="resume" element={<Resume />} />
+            <Route path="skills" element={<Skills />} />
             <Route path="projects" element={<Projects />} />
-            <Route path="home" element={<Home />} />
+            <Route  path="home" element={<Home />} />
           </Route>
         </Routes>
       </BrowserRouter>
