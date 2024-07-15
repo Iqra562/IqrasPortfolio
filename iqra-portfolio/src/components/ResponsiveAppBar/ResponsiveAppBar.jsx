@@ -164,7 +164,7 @@ const ResponsiveAppBar = () => {
   };
   const pages = [
     { name: 'Home', path: '/home' },
-  { name: 'Resume', path: '/resume' },
+  { name: 'About', path: '/about' },
   { name: 'Skills', path: '/skills' },
   { name: 'Projects', path: '/projects' },
   { name: 'Contact', path: '/contact' },

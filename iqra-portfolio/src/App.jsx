@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
 import Home from "./pages/Home/Home";
-import Resume from "./pages/Resume/Resume"; // corrected import path
+import About from "./pages/About/About"; // corrected import path
 import Projects from "./pages/Projects/Projects";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "./ThemeProvider/AppThemeProvider";
@@ -14,8 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="resume" element={<Resume />} />
-            <Route path="skills" element={<Skills />} />
+            <Route path="about" element={<About />} />
+            <Route path="skills" element={<Skills/>} />
             <Route path="projects" element={<Projects />} />
             <Route  path="home" element={<Home />} />
           </Route>
