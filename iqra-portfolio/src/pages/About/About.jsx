@@ -1,6 +1,7 @@
 import { Box, Container, styled, Typography } from "@mui/material";
 import React from "react";
-
+import CommonHeader from "../../components/CommonHeader/CommonHeader";
+import computerGijrl from '../../assets/Images/computerGirl.png'
 const AppContainer = styled(Container)(({ theme }) => ({
   width: "70%",
   backgroundColor: theme.palette.primary.main,
@@ -8,41 +9,35 @@ const AppContainer = styled(Container)(({ theme }) => ({
   minHeight: "80vh",
   // marginBottom: "100px"
 }));
-const HeadingBox = styled(Box)({
-  position: "relative",
-  top: "10px",
-  
-});
-const styles = {
-    heading: {
-      color: "#dedede",
-      position: "relative",
-      display: "inline-block",
-      '::after': {
-        content: '""',
-        display: "block",
-        width: "25%",
-        height: "2px",
-        backgroundColor: "#69b6fa",
-        position: "absolute",
-        bottom: "6px",
-        left: "41px",
-        marginLeft:"10%"
-      },
-    },
-  };
+
 
 
 function About(){
     return(
       <AppContainer>
-<Container disableGutters>
-<HeadingBox>
+<Container disableGutters style={{backgroundColor:""}}>
 
-<Typography sx={styles.heading} className="heading">
-  About
+<CommonHeader PageName="About"/>
+<Box sx={{
+  display:"flex",
+  justifyContent:"space-between"
+}}>
+<Box sx={{
+  width:"30%",
+  backgroundColor:"red"
+}}>
+<Typography>
+  Iqra_
 </Typography>
-</HeadingBox>
+</Box>
+<Box sx={{
+  width:"30%",
+  backgroundColor:"red"
+}}>
+j
+</Box>
+</Box>
+
 </Container>
       </AppContainer>
     )
