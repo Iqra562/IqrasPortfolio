@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Card, CardContent, CardMedia, colors, IconButton, Link, styled, Typography } from "@mui/material";
-import myimage from "../../assets/Images/computerGirl.png"
 import { HiLink } from "react-icons/hi";
 import { IoIosGitBranch } from "react-icons/io";
 import { ProjectData } from "./ProjectData";

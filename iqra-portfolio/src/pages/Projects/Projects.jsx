@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Box, Card, CardContent, CardMedia, colors, Container, IconButton, Link, styled, Typography } from "@mui/material";
 import CommonHeader from "../../components/CommonHeader/CommonHeader";
-import myimage from "../../assets/Images/computerGirl.png"
 import { HiLink } from "react-icons/hi";
 import { IoIosGitBranch } from "react-icons/io";
 import CustomProjectDiv from "./CustomProjectDiv";

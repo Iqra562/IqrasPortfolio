@@ -1,137 +1,4 @@
-// import * as React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import IconButton from '@mui/material/IconButton';
-// import Typography from '@mui/material/Typography';
-// import Menu from '@mui/material/Menu';
-// import MenuIcon from '@mui/icons-material/Menu';
-// import Container from '@mui/material/Container';
-// import Button from '@mui/material/Button';
-// import MenuItem from '@mui/material/MenuItem';
-// import { Link, useLocation } from 'react-router-dom'; // Ensure this is imported
-// import { motion } from 'framer-motion';
-// import './ResponsiveAppBar.css';
-// const pages = [
-//   { name: 'Resume', path: '/resume' },
-//   { name: 'Projects', path: '/projects' }
-// ];
 
-// function ResponsiveAppBar() {
-//   const [anchorElNav, setAnchorElNav] = React.useState(null);
-//   const location = useLocation();
-//   const currentPath = location.pathname;
-
-//   const handleOpenNavMenu = (event) => {
-//     setAnchorElNav(event.currentTarget);
-//   };
-
-//   const handleCloseNavMenu = () => {
-//     setAnchorElNav(null);
-//   };
-
-//   return (
-//     <AppBar position="static">
-//       <Container maxWidth="xl">
-//         <Toolbar disableGutters>
-//           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-//             <IconButton
-//               size="large"
-//               aria-label="account of current user"
-//               aria-controls="menu-appbar"
-//               aria-haspopup="true"
-//               onClick={handleOpenNavMenu}
-//               color="inherit"
-//             >
-//               <MenuIcon />
-//             </IconButton>
-//             <Menu
-//               id="menu-appbar"
-//               anchorEl={anchorElNav}
-//               anchorOrigin={{
-//                 vertical: 'bottom',
-//                 horizontal: 'left',
-//               }}
-//               keepMounted
-//               transformOrigin={{
-//                 vertical: 'top',
-//                 horizontal: 'left',
-//               }}
-//               open={Boolean(anchorElNav)}
-//               onClose={handleCloseNavMenu}
-//               sx={{
-//                 display: { xs: 'block', md: 'none' },
-//               }}
-//             >
-//               {pages.map((page) => (
-//                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-//                   <Link
-//                     to={page.path}
-//                     style={{ textDecoration: 'none', color: currentPath === page.path ? 'yellow' : 'inherit' }}
-//                   >
-//                     <Typography textAlign="center">
-//                       {page.name}
-//                     </Typography>
-//                   </Link>
-//                 </MenuItem>
-//               ))}
-//             </Menu>
-//           </Box>
-
-//           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-//             {pages.map((page) => (
-//               <Box key={page.name} sx={{ position: 'relative', mx: 2 }}>
-//                 <Button
-//                 disableRipple
-//                   onClick={handleCloseNavMenu}
-//                   sx={{
-//                     my: 2,
-//                     color: currentPath === page.path ? '#69b6fa' : 'white',
-//                     display: 'block',
-//                     position: 'relative',
-//                     zIndex: 1,
-//                     textTransform:'capitalize',
-//                     fontSize:'16px'
-                
-//                   }}
-//                   component={Link}
-//                   to={page.path}
-//                 >
-//    <div className="nav-item">
-//             {page.name}
-//             {currentPath === page.path && (
-//                   <motion.div
-//                     initial={{ width: 0, left: '50%' }}
-//                     animate={{ width: '100%', left: 0 }}
-//                     exit={{ width: 0, left: '50%' }}
-//                     transition={{ duration: 1}}
-                   
-//                     style={{
-//                       position: 'absolute',
-//                       height: '2px',
-//                       bottom: -2,
-//                       backgroundColor: '#69b6fa',
-//                       zIndex: 0,
-//                     }}
-//                   />
-//                 )}
-//           </div>
-//                 </Button>
-//                 <div>
-
-//                 </div>
-              
-               
-//               </Box>
-//             ))}
-//           </Box>
-//         </Toolbar>
-//       </Container>
-//     </AppBar>
-//   );
-// }
-
-// export default ResponsiveAppBar;
 
 import React, { useState, useEffect } from 'react';
 import { Box, Button, styled } from '@mui/material';
@@ -146,6 +13,7 @@ import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import { Link, useLocation } from 'react-router-dom'; // Ensure this is imported
 import './ResponsiveAppBar.css';
+import colors from '../../ThemeProvider/colors';
 
 const ResponsiveAppBar = () => {
   const location = useLocation();
@@ -206,7 +74,7 @@ const ResponsiveAppBar = () => {
               color: 'inherit', 
               textDecoration: 'none',
               fontFamily: 'Roboto',
-              letterSpacing:'normal'
+              letterSpacing:'normal'  
             }}
           >
             <Link to="/home">
@@ -215,6 +83,10 @@ const ResponsiveAppBar = () => {
           </Typography>
 
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{display:"flex",flexGrow:1,alignItems:"center",justifyContent:"space-between"}}>
+<Typography>
+  Iqra
+</Typography>
           <IconButton
             size="large"
             aria-label="account of current user"
@@ -222,10 +94,12 @@ const ResponsiveAppBar = () => {
             aria-haspopup="true"
             onClick={handleOpenNavMenu}
             color="inherit"
+            disableRipple
             
-          >
+            >
             <MenuIcon />
           </IconButton>
+          </Box>       
           <Menu
             id="menu-appbar"
             anchorEl={anchorElNav}
@@ -243,13 +117,16 @@ const ResponsiveAppBar = () => {
             sx={{
               display: { xs: 'block', md: 'none' },
               marginTop: '55px',
-              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+
+              backgroundColor: 'rgba(1, 1, 0, 0.9)',
               height: '60%',
               '& .MuiList-root': {
                 padding: '0px',
               },
           
               '& .MuiPaper-root': {
+                position:"relative",
+                left:"0",
                 backgroundColor: 'transparent',
                 padding:'0px',
                 height:'100%',
@@ -257,13 +134,14 @@ const ResponsiveAppBar = () => {
               },
             }}
             
+            
           >
           {pages.map((page) => (
             <MenuItem
   className=""
   key={page.name}
   onClick={handleCloseNavMenu}
-  style={{ color: 'white', width: '100vh', height:'100%' }}
+  style={{ color: 'white', width: '100vh', height:'100%', }}
 >
   <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
     <Typography textAlign="center" style={{ position: 'relative', zIndex: 1 }}>
@@ -296,9 +174,18 @@ const ResponsiveAppBar = () => {
   </Link>
 </MenuItem>
 
+
 ))}
 
+<MenuItem>
+<Box sx={{backgroundColor:"",color:colors.subtitle,padding:"9px",boxShadow:"0.5px 0.2px 0px #69b6fa ",borderRadius:"3px",display: { xs: 'flex', md: 'none' }}}>
+      <Typography>
+        Resume
+      </Typography>
+    </Box> 
+</MenuItem>
           </Menu>
+       
         </Box>
 
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -348,7 +235,13 @@ const ResponsiveAppBar = () => {
           </Button>
         </Box>
       ))}
-    </Box>
+    </Box>                    
+          <Box sx={{backgroundColor:"",color:colors.subtitle,padding:"9px",boxShadow:"0.5px 0.2px 0px #69b6fa ",borderRadius:"3px",display: { xs: 'none', md: 'flex' }}}>
+      <Typography>
+        Resume
+      </Typography>
+    </Box> 
+
       </Toolbar>
     </Container>
   </AppBar>

@@ -1,7 +1,6 @@
 import { Box, Container, styled, Typography } from "@mui/material";
 import React from "react";
 import CommonHeader from "../../components/CommonHeader/CommonHeader";
-import computerGijrl from '../../assets/Images/computerGirl.png'
 const AppContainer = styled(Container)(({ theme }) => ({
   width: "70%",
   backgroundColor: theme.palette.primary.main,
