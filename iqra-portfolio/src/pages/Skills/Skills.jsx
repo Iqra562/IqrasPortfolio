@@ -19,7 +19,7 @@ function Skills() {
       <Container disableGutters>
         <CommonHeader PageName="Skills"/>
       
-        <Box sx={{backgroundColor:"", display: "flex",justifyContent:"flex-start" ,flexWrap:"wrap",gap:"20px",marginTop:"10px"}}>
+        <Box sx={{ display: "flex",justifyContent:"flex-start" ,flexWrap:"wrap",gap:"20px",marginTop:"10px"}}>
 {
    skillIcons.map((item,index)=>(
  <CustomBox  key={index}  icon={item.icon} iconName={item.name} />

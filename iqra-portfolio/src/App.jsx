@@ -6,6 +6,7 @@ import Projects from "./pages/Projects/Projects";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "./ThemeProvider/AppThemeProvider";
 import Skills from "./pages/Skills/Skills";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
+            {/* <Route path="about" element={<About />} /> */}
             <Route path="skills" element={<Skills/>} />
             <Route path="projects" element={<Projects />} />
+            <Route path="contact" element={<Contact />} />
             <Route  path="home" element={<Home />} />
           </Route>
         </Routes>

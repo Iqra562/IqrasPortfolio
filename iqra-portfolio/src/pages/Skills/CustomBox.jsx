@@ -5,14 +5,14 @@ function CustomBox({icon:IconComponent,iconName}){
 
   const CustomBoxContainer = styled(Box)({
     border: `1px solid ${colors.border}`,
-    display: 'flex',
     borderRadius: '5px',
-    flexDirection: 'column',
     alignItems: 'center',
     marginTop: '15px',
     marginBottom: '15px',
     padding: '20px',
     gap: '10px',
+    display: 'flex',
+    flexDirection: 'column',
     flex: '0 1 calc(25% - 20px)', // 4 items per row
     '@media (max-width: 1200px)': {
       flex: '1 1 calc(33.33% - 20px)' // 3 items per row for medium screens

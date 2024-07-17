@@ -2,8 +2,6 @@ import React from 'react';
 import { Box, Container, Typography, styled,useMediaQuery,useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 import IconButton from '@mui/material/IconButton';
-import DeleteIcon from "@mui/material/Alert"
-import AcUnitIcon from '@mui/icons-material/AcUnit';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
