@@ -57,7 +57,7 @@ function Contact() {
     <AppContainer>
       <Container disableGutters >
 
-        <CommonHeader PageName="About" />
+        <CommonHeader PageName="Contact" />
         <Box sx={{
           display: "flex",
           flexDirection: {
