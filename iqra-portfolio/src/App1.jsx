@@ -18,6 +18,7 @@ const App = () => {
 };
 
 const RoutesWithTransitions = () => {
+
   const location = useLocation();
 
   return (

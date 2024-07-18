@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link, useLocation } from 'react-router-dom'; // Ensure this is imported
 import './ResponsiveAppBar.css';
 import colors from '../../ThemeProvider/colors';
-
+import cv from '../../assets/Images/Resume/Iqra-Resume.pdf'
 const ResponsiveAppBar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
@@ -58,7 +58,7 @@ const ResponsiveAppBar = () => {
 
   return (
 
-    <AppBar position="static"  >
+    <AppBar position="sticky"  >
     <Container maxWidth="lg">
       <Toolbar disableGutters>
 
@@ -84,9 +84,23 @@ const ResponsiveAppBar = () => {
 
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
           <Box sx={{display:"flex",flexGrow:1,alignItems:"center",justifyContent:"space-between"}}>
-<Typography>
-  Iqra
-</Typography>
+          <Typography
+          variant="h4"
+            noWrap
+            component="a"
+            sx={{
+              mr: 2,
+              fontWeight: 700,
+              color: 'inherit', 
+              textDecoration: 'none',
+              fontFamily: 'Roboto',
+              letterSpacing:'normal'  
+            }}
+          >
+            <Link to="/home">
+            Iqra
+            </Link>
+          </Typography>
           <IconButton
             size="large"
             aria-label="account of current user"
@@ -137,13 +151,13 @@ const ResponsiveAppBar = () => {
             
           >
           {pages.map((page) => (
+            <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
             <MenuItem
   className=""
   key={page.name}
   onClick={handleCloseNavMenu}
   style={{ color: 'white', width: '100vh', height:'100%', }}
 >
-  <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
     <Typography textAlign="center" style={{ position: 'relative', zIndex: 1 }}>
       {page.name}
       <AnimatePresence>
@@ -171,18 +185,24 @@ const ResponsiveAppBar = () => {
         )}
       </AnimatePresence>
     </Typography>
-  </Link>
 </MenuItem>
+  </Link>
 
 
 ))}
 
 <MenuItem>
-<Box sx={{backgroundColor:"",color:colors.subtitle,padding:"9px",boxShadow:"0.5px 0.2px 0px #69b6fa ",borderRadius:"3px",display: { xs: 'flex', md: 'none' }}}>
+<Box>
+            <a href={cv} download>
+          <Box sx={{backgroundColor:"",color:colors.subtitle,padding:"9px",boxShadow:"0.5px 0.2px 0px #69b6fa ",borderRadius:"3px",display: { xs: 'flex', md: 'non3' }}}>
+
+
       <Typography>
         Resume
       </Typography>
     </Box> 
+            </a>
+      </Box>                
 </MenuItem>
           </Menu>
        
@@ -235,12 +255,18 @@ const ResponsiveAppBar = () => {
           </Button>
         </Box>
       ))}
-    </Box>                    
+    </Box>    
+    <Box>
+            <a href={cv} download>
           <Box sx={{backgroundColor:"",color:colors.subtitle,padding:"9px",boxShadow:"0.5px 0.2px 0px #69b6fa ",borderRadius:"3px",display: { xs: 'none', md: 'flex' }}}>
+
+
       <Typography>
         Resume
       </Typography>
     </Box> 
+            </a>
+      </Box>                
 
       </Toolbar>
     </Container>

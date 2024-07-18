@@ -56,7 +56,7 @@ const {name,description,githubLink,liveLink,image,technologyUsed} =data
         justifyContent: "center",
         borderRadius: "5px",
         fontSize: "14px",
-        boxShadow:"1px 1px 6px #1f1e1e"
+        boxShadow:"1px 1px 1px #1f1e1e"
     })
     return (
         <ProjectContainer >
@@ -152,7 +152,7 @@ const {name,description,githubLink,liveLink,image,technologyUsed} =data
     Tech Stack:
  </Typography>
 
-                    <Box sx={{ display: "flex", gap: "2px", flexWrap: "wrap",marginTop:"5px" }}>
+                    <Box sx={{ display: "flex", gap: "8px", flexWrap: "wrap",marginTop:"5px" }}>
                       
                         {
                             technologyUsed.map((item,index)=>(
