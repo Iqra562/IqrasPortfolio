@@ -1,7 +1,7 @@
 .gradient-text {
     display: inline-block;
     /* font-size: 30px; */
-    background: linear-gradient(to bottom  right,  white 0%, gray);
+    background: linear-gradient(to bottom  right,  white 20%, rgb(44, 44, 44));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
