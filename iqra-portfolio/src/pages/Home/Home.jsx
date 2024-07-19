@@ -6,14 +6,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import './Home.css';
-
 const AppContainer = styled(Container)(({ theme }) => ({
-  width: "70%",
   backgroundColor: theme.palette.primary.main,
   marginTop: "30px",
- minHeight:"80vh",
-  // marginBottom: "100px"
+  minHeight: "80vh",
+  width: "70%",
+  [theme.breakpoints.down('sm')]: {
+    width: '90%',
+  },
 }));
+
+// marginBottom: "100px"
 const ContentBox = styled(Box)(({ theme }) => ({
 width: "50%",
  padding: "50px" ,
