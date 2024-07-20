@@ -5,12 +5,7 @@ import { HiLink } from "react-icons/hi";
 import { IoIosGitBranch } from "react-icons/io";
 import CustomProjectDiv from "./CustomProjectDiv";
 import { ProjectData } from "./ProjectData";
-const AppContainer = styled(Container)(({ theme }) => ({
-  width: "70%",
-  backgroundColor: theme.palette.primary.main,
-  marginTop: "30px",
-  minHeight: "80vh",
-}));
+import { AppContainer } from "../Home/Home";
 
 
 function Projects() {

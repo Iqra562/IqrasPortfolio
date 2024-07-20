@@ -3,14 +3,14 @@
 import CustomBox from "./CustomBox";
 import  {skillIcons}  from "./SkillData";
 import CommonHeader from "../../components/CommonHeader/CommonHeader";
-
-const AppContainer = styled(Container)(({ theme }) => ({
-  width: "70%",
-  backgroundColor: theme.palette.primary.main,
-  marginTop: "30px",
-  minHeight: "80vh",
-  // marginBottom: "100px"
-}));
+import  {AppContainer} from "../Home/Home"
+// const AppContainer = styled(Container)(({ theme }) => ({
+//   width: "70%",
+//   backgroundColor: theme.palette.primary.main,
+//   marginTop: "30px",
+//   minHeight: "80vh",
+//   // marginBottom: "100px"
+// }));
 
 
 function Skills() {

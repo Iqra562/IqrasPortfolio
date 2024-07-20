@@ -1,11 +1,17 @@
 import React from "react";
-import { Box, Card, CardContent, CardMedia, colors, IconButton, Link, styled, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, IconButton, Link, styled, Typography ,useTheme,useMediaQuery} from "@mui/material";
 import { HiLink } from "react-icons/hi";
 import { IoIosGitBranch } from "react-icons/io";
 import { ProjectData } from "./ProjectData";
 
 function CustomProjectDiv({data}) {
-const {name,description,githubLink,liveLink,image,technologyUsed} =data
+const {name,description,githubLink,liveLink,image,technologyUsed} =data;
+
+const theme = useTheme();
+const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+const isMediumScreen = useMediaQuery(theme.breakpoints.only('md'));
+
+
     const StyledCard = styled(Box)({
         position: "relative",
         width: "100%",
@@ -55,9 +61,12 @@ const {name,description,githubLink,liveLink,image,technologyUsed} =data
         marginLeft:"4px",
         justifyContent: "center",
         borderRadius: "5px",
-        fontSize: "14px",
+        fontSize:isSmallScreen ? "11px" : isMediumScreen ? "14px":"14px",
         boxShadow:"1px 1px 1px #1f1e1e"
     })
+
+  
+  
     return (
         <ProjectContainer >
             <Card sx={{
@@ -110,7 +119,7 @@ const {name,description,githubLink,liveLink,image,technologyUsed} =data
                 }}>
                     <Box sx={{ display: "flex" }}>
 
-                        <Typography variant="h5">
+                        <Typography variant={isSmallScreen ? 'h5' : isMediumScreen ? 'h4' : 'h4'}>
                             <Link
                                 href={githubLink}
                                 target="_blank"
@@ -139,9 +148,8 @@ const {name,description,githubLink,liveLink,image,technologyUsed} =data
                             <IoIosGitBranch fontSize="large" style={{ color: "#979191" }} />
                         </IconButton>
                     </Box>
-                    <Typography  sx={{
+                    <Typography  variant={isSmallScreen ? "body2" : isMediumScreen ? "body1" : "body1"}   sx={{
                         color: "#a3a3a3",
-                        fontSize: "16px",
                         marginTop:"10px"
                     }}>
                        {description}

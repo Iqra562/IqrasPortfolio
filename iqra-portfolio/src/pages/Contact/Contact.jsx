@@ -6,14 +6,8 @@ import { RxLinkedinLogo } from "react-icons/rx";
 import { ImWhatsapp } from "react-icons/im";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
+import { AppContainer } from "../Home/Home";
 
-const AppContainer = styled(Container)(({ theme }) => ({
-  width: "70%",
-  backgroundColor: theme.palette.primary.main,
-  marginTop: "30px",
-  minHeight: "80vh",
-  // marginBottom: "100px"
-}));
 const StackBox = styled(Box)(({theme})=>({
   backgroundColor: "#0a0a0a", 
   display: "flex", 
@@ -74,10 +68,10 @@ function Contact() {
           <StackBox >
             <Box>
               <IconButtonContainer
-                component="a"
-                href="https://www.linkedin.com/in/iqra-khaliq-a90484253"
-                target="_blank"
-                rel="noopener noreferrer"
+              //  component="a"
+               // href="https://www.linkedin.com/in/iqra-khaliq-a90484253"
+               // target="_blank"
+               //  rel="noopener noreferrer"
                 disableRipple={true}
 
               >
@@ -89,10 +83,10 @@ function Contact() {
           <StackBox > 
             <Box>
               <IconButtonContainer
-                component="a"
-                href="https://www.linkedin.com/in/iqra-khaliq-a90484253"
-                target="_blank"
-                rel="noopener noreferrer"
+               // component="a"
+               // href="https://www.linkedin.com/in/iqra-khaliq-a90484253"
+               // target="_blank"
+                //rel="noopener noreferrer"
                 disableRipple={true}
 
               >

@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import './Home.css';
-const AppContainer = styled(Container)(({ theme }) => ({
+export  const AppContainer = styled(Container)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   marginTop: "30px",
   minHeight: "80vh",
