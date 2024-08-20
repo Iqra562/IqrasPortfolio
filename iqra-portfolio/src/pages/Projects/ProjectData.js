@@ -1,6 +1,6 @@
 import blogportal from "../../assets/Images/ProjectImages/blog-portal.png"
 import dictionaryapp from "../../assets/Images/ProjectImages/dictionary-app.png"
-import socailapp from "../../assets/Images/ProjectImages/socail-app.PNG"
+import socailapp from "../../assets/Images/ProjectImages/socail-app.png"
 export const ProjectData = [
     {
       name: "Blog Portal",
