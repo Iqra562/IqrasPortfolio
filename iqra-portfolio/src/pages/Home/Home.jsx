@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
+import  profile from '../../assets/Images/Profile/profile.jpg'
 import './Home.css';
 export  const AppContainer = styled(Container)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
@@ -59,9 +59,18 @@ function Home() {
   return (
     // <Box>
       <AppContainer >
-        <Container  disableGutters style={{ display: "flex", flexDirection: "row", }}>
+      
+<Container disableGutters sx={{ 
+  display: "flex", 
+  flexDirection: { 
+    sm: 'column', 
+    xs: 'column', 
+    md: 'row', 
+    lg: 'row', 
+  } 
+}}>
           <ContentBox>
-          <Box sx={{ display: "flex", alignItems: "center", justifyContent: { xs: 'center',sm:"left"  } }}>
+          <Box sx={{ display: "flex", alignItems: "center", justifyContent: { xs: 'center',sm:"left"  } }}> 
 
             <Typography  variant='h4' sx={{ color: '#dedede' ,fontSize: {
                     xs: '25px', 
@@ -144,7 +153,12 @@ function Home() {
           </IconBox>
 
           </ContentBox>
-       
+          <Box  sx={{display:"center",alignItems:"center"}}   style={{
+      WebkitFilter: 'grayscale(100%)', 
+      filter: 'grayscale(100%)'
+    }} >
+          <img width='350px' src={profile} alt="Profile" />
+          </Box>
         </Container>
       </AppContainer>
     // </Box>
