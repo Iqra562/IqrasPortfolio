@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
@@ -11,13 +11,30 @@ ReactGA.initialize('G-1TSD80KJ1L');
 
 function App() {
     // usePageTracking();
-     useEffect(() => {
-     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-   }, []);
+  //    useEffect(() => {
+  //    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  //  }, []);
+
+  function Tracker() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    const pageName = getPageName(location.pathname);
+    ReactGA.pageview(location.pathname, [], {
+      page_title: document.title,
+      page_name: pageName
+    });
+  }, [location]);
+  
+  return null;
+}
+
    
   return (
-   
-        <Routes>
+    
+    <>
+          <Tracker />
+    <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             {/* <Route path="about" element={<About />} /> */}
@@ -27,8 +44,23 @@ function App() {
             <Route  path="home" element={<Home />} />
           </Route>
         </Routes>
+    </>
+
     
   );
+}
+function Tracker() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    const pageName = getPageName(location.pathname);
+    ReactGA.pageview(location.pathname, [], {
+      page_title: document.title,
+      page_name: pageName
+    });
+  }, [location]);
+  
+  return null;
 }
 
 export default App;
