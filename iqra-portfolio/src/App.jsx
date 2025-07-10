@@ -7,7 +7,7 @@ import Contact from "./pages/Contact/Contact";
 import usePageTracking from './hooks/usePageTracking';
 
 function App() {
-    usePageTracking();
+//    usePageTracking();
   return (
    
         <Routes>
