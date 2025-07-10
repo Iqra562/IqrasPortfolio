@@ -6,8 +6,10 @@ import { ThemeProvider } from "@emotion/react";
 import { theme } from "./ThemeProvider/AppThemeProvider";
 import Skills from "./pages/Skills/Skills";
 import Contact from "./pages/Contact/Contact";
+import usePageTracking from './hooks/usePageTracking';
 
 function App() {
+    usePageTracking();
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
