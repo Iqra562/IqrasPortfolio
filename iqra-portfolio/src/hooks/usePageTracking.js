@@ -1,16 +1,18 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+// hooks/usePageTracking.js
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const usePageTracking = () => {
+export default function usePageTracking() {
   const location = useLocation();
 
   useEffect(() => {
-    if (window.gtag) {
-      window.gtag('event', 'page_view', {
-        page_path: location.pathname + location.search,
-      });
-    }
+    const pageName = document.title || location.pathname.split('/').pop() || 'Home';
+    
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_path: location.pathname,
+      page_name: pageName, // Custom page name
+      page_location: window.location.href
+    });
   }, [location]);
-};
-
-export default usePageTracking;
+}
