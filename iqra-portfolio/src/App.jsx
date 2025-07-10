@@ -49,18 +49,14 @@ function App() {
     
   );
 }
-function Tracker() {
-  const location = useLocation();
+function getPageName(pathname) {
+  const nameMap = {
+    '/': 'Home',
+    '/skills': 'Skills',
+    '/projects': 'Projects',
+    '/contact': 'Contact'
+  };
   
-  useEffect(() => {
-    const pageName = getPageName(location.pathname);
-    ReactGA.pageview(location.pathname, [], {
-      page_title: document.title,
-      page_name: pageName
-    });
-  }, [location]);
-  
-  return null;
+  return nameMap[pathname] || pathname;
 }
-
 export default App;
