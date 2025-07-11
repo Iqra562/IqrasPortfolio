@@ -10,11 +10,13 @@ import { useEffect } from "react";
 ReactGA.initialize('G-1TSD80KJ1L');
 
 function App() {
-    // usePageTracking();
-     useEffect(() => {
-     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-   }, []);
+    const location = useLocation();
 
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+  
+  // usePageTracking();
 //   function Tracker() {
 //   const location = useLocation();
   
