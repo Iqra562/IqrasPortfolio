@@ -33,7 +33,7 @@ function App() {
   return (
     
     <>
-          <Tracker />
+          {/* <Tracker /> */}
     <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
