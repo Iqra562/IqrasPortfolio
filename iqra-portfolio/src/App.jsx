@@ -7,35 +7,21 @@ import Contact from "./pages/Contact/Contact";
 import usePageTracking from './hooks/usePageTracking';
   import ReactGA from 'react-ga';
 import { useEffect } from "react";
-ReactGA.initialize('G-1TSD80KJ1L');
+// ReactGA.initialize('G-1TSD80KJ1L');
 
 function App() {
     const location = useLocation();
-    usePageTracking();
+    // usePageTracking();
 
-  useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
-  }, [location]);
-  
-//   function Tracker() {
-//   const location = useLocation();
-  
-//   useEffect(() => {
-//     const pageName = getPageName(location.pathname);
-//     ReactGA.pageview(location.pathname, [], {
-//       page_title: document.title,
-//       page_name: pageName
-//     });
-//   }, [location]);
-  
-//   return null;
-// }
+  // useEffect(() => {
+  //   ReactGA.send({ hitType: "pageview", page: location.pathname });
+  // }, [location]);
+
 
    
   return (
     
     <>
-          {/* <Tracker /> */}
     <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -51,14 +37,5 @@ function App() {
     
   );
 }
-// function getPageName(pathname) {
-//   const nameMap = {
-//     '/': 'Home',
-//     '/skills': 'Skills',
-//     '/projects': 'Projects',
-//     '/contact': 'Contact'
-//   };
-  
-//   return nameMap[pathname] || pathname;
-// }
+
 export default App;
