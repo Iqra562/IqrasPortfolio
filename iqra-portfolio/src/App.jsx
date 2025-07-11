@@ -11,23 +11,23 @@ ReactGA.initialize('G-1TSD80KJ1L');
 
 function App() {
     // usePageTracking();
-  //    useEffect(() => {
-  //    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-  //  }, []);
+     useEffect(() => {
+     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+   }, []);
 
-  function Tracker() {
-  const location = useLocation();
+//   function Tracker() {
+//   const location = useLocation();
   
-  useEffect(() => {
-    const pageName = getPageName(location.pathname);
-    ReactGA.pageview(location.pathname, [], {
-      page_title: document.title,
-      page_name: pageName
-    });
-  }, [location]);
+//   useEffect(() => {
+//     const pageName = getPageName(location.pathname);
+//     ReactGA.pageview(location.pathname, [], {
+//       page_title: document.title,
+//       page_name: pageName
+//     });
+//   }, [location]);
   
-  return null;
-}
+//   return null;
+// }
 
    
   return (
@@ -49,14 +49,14 @@ function App() {
     
   );
 }
-function getPageName(pathname) {
-  const nameMap = {
-    '/': 'Home',
-    '/skills': 'Skills',
-    '/projects': 'Projects',
-    '/contact': 'Contact'
-  };
+// function getPageName(pathname) {
+//   const nameMap = {
+//     '/': 'Home',
+//     '/skills': 'Skills',
+//     '/projects': 'Projects',
+//     '/contact': 'Contact'
+//   };
   
-  return nameMap[pathname] || pathname;
-}
+//   return nameMap[pathname] || pathname;
+// }
 export default App;
