@@ -13,7 +13,12 @@ function App() {
     // usePageTracking();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
+ReactGA.send({
+  hitType: "pageview",
+  page: window.location.pathname,
+  title: document.title,
+  location: window.location.href,
+});
   }, [location]);
 
 
