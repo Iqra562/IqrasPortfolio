@@ -5,17 +5,16 @@ import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
 import Contact from "./pages/Contact/Contact";
 import usePageTracking from './hooks/usePageTracking';
-  import ReactGA from 'react-ga';
+import ReactGA from "react-ga4";
 import { useEffect } from "react";
-// ReactGA.initialize('G-1TSD80KJ1L');
 
 function App() {
     const location = useLocation();
     // usePageTracking();
 
-  // useEffect(() => {
-  //   ReactGA.send({ hitType: "pageview", page: location.pathname });
-  // }, [location]);
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
 
 
    
